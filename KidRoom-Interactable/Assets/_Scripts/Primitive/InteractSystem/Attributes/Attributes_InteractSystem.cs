@@ -13,7 +13,7 @@ namespace Assets._Scripts.Primitive.InteractSystem.Attributes
         [Serializable]
         public class GameObjectStatesEntry
         {
-            public ScriptableObject_Core_State State;
+            public List<ScriptableObject_Core_State> States;
             public string DisplayText;
         }
         public List<GameObjectStatesEntry> GameObjectStates;

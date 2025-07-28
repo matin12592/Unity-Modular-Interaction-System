@@ -18,9 +18,7 @@ namespace Assets._Scripts.Primitive.InteractSystem.Monobehaviours
 
         public virtual void OnInteract()
         {
-            if (!CanInteract()) return; 
-
-            // Add your custom interaction logic here
+            if (!CanInteract()) return;
             DoCustomInteraction();
         }
 

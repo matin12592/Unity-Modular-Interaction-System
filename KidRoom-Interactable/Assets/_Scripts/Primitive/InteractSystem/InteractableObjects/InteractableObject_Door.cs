@@ -16,10 +16,16 @@ namespace Assets._Scripts.Primitive.InteractSystem.InteractableObjects
         [SerializeField] private float _openAngle = 90f;
         [SerializeField] private float _animationDuration = 2f;
 
+        private Mono_Core_Data _coreData;
         private bool _isAnimating;
         private Quaternion _closedRotation;
         private Quaternion _openRotation;
 
+
+        private void Awake()
+        {
+            _coreData = GetComponent<Mono_Core_Data>();
+        }
         protected override void Start()
         {
             base.Start();
@@ -32,17 +38,16 @@ namespace Assets._Scripts.Primitive.InteractSystem.InteractableObjects
         {
             if (_isAnimating) return;
 
-            var coreData = GetComponent<Mono_Core_Data>();
-            if (coreData == null) return;
+            if (_coreData == null) return;
 
             // Toggle between open and closed states
             FindAnyObjectByType<Mono_InteractSystem_MouseController>().UpdateInteractText(_animationDuration);
 
-            if (Manager_Core.CompareState(coreData, _closedState))
+            if (Manager_Core.CompareState(_coreData, _closedState))
             {
                 StartCoroutine(AnimateDoor(_openRotation, _openState));
             }
-            else if(Manager_Core.CompareState(coreData, _openState))
+            else if(Manager_Core.CompareState(_coreData, _openState))
             {
                 StartCoroutine(AnimateDoor(_closedRotation, _closedState));
             }
@@ -66,7 +71,7 @@ namespace Assets._Scripts.Primitive.InteractSystem.InteractableObjects
             _pivot.transform.rotation = targetRotation;
 
             // Update state after animation
-            Manager_Core.SetState(gameObject, targetState);
+            Manager_Core.SetState(_coreData, targetState);
 
             _isAnimating = false;
         }

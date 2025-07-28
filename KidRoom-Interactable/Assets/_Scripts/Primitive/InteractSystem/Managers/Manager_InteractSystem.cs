@@ -1,8 +1,10 @@
 using Assets._Scripts.Primitive.InteractSystem.Monobehaviours;
 using System;
+using System.Collections.Generic;
 using Assets._Scripts.Primitive.InteractSystem.DataObjects;
 using UnityEngine;
 using System.Linq;
+using Assets._Scripts.Core.Managers;
 using Assets._Scripts.Core.Monobehaviours;
 
 namespace Assets._Scripts.Primitive.InteractSystem.Managers
@@ -60,7 +62,13 @@ namespace Assets._Scripts.Primitive.InteractSystem.Managers
                 return null;
             }
 
-            var entry = interactAttributes.GameObjectStates.FirstOrDefault(e => e.State == interactData.CurrentState);
+            var entry = InteractSystem_Utils.GetMatchingStateEntry(
+                interactData,
+                interactAttributes.GameObjectStates,
+                exactMatch: false
+            );
+
+
             return entry?.DisplayText ?? interactAttributes.DefaultText;
         }
         #endregion
