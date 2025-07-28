@@ -9,7 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2227089040537196225}
-  m_Layer: 0
+  - component: {fileID: 8220624235623727920}
+  - component: {fileID: 293751573724576498}
+  - component: {fileID: 7155132737412146380}
+  - component: {fileID: 2281124637121208253}
+  m_Layer: 6
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,6 +36,76 @@ Transform:
   - {fileID: 5269039077306451706}
   m_Father: {fileID: 6779169542673306398}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8220624235623727920
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751807670004355539}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0626068, y: 4.057663, z: 0.19830966}
+  m_Center: {x: -0.98853946, y: 2.0074573, z: 0.002520442}
+--- !u!114 &293751573724576498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751807670004355539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcad19b26ff7d6344b6cbe4d96fd438e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentStates:
+  - {fileID: 11400000, guid: a5118da0e4cf35e4c942ad2f296d7808, type: 2}
+  InteractSystemAttributes: {fileID: 11400000, guid: 6038271d82511be42848e35f93885589, type: 2}
+--- !u!114 &7155132737412146380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751807670004355539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 834ff89f554ed714cbeb8b611dce652f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.9253365, a: 1}
+  highlightWidth: 2
+  outlineMode: 1
+  autoAddOutlineComponent: 1
+--- !u!114 &2281124637121208253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751807670004355539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7538ba992b11a0c409d4e4d5b0fc02c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canInteract: 1
+  _pivot: {fileID: 751807670004355539}
+  _openState: {fileID: 11400000, guid: 3bcf28bed1c45a5448b9c111e6af96e8, type: 2}
+  _closedState: {fileID: 11400000, guid: a5118da0e4cf35e4c942ad2f296d7808, type: 2}
+  _openAngle: 90
+  _animationDuration: 0.75
 --- !u!1 &2388211085019809745
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,11 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1444667233257113938}
-  - component: {fileID: 1782784626729358057}
-  - component: {fileID: 540951055703523523}
-  - component: {fileID: 6119060678895587289}
-  - component: {fileID: 1685517693547218041}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: InteractableObject_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,76 +246,6 @@ Transform:
   - {fileID: 6779169542673306398}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1782784626729358057
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7543077257075836612}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.2186217, y: 3.9917173, z: 0.28278756}
-  m_Center: {x: -0.005903244, y: 2.0103822, z: 0.00000011920929}
---- !u!114 &540951055703523523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7543077257075836612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcad19b26ff7d6344b6cbe4d96fd438e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentState: {fileID: 11400000, guid: a5118da0e4cf35e4c942ad2f296d7808, type: 2}
-  GameItem: {fileID: 0}
-  InteractSystemAttributes: {fileID: 11400000, guid: 6038271d82511be42848e35f93885589, type: 2}
---- !u!114 &6119060678895587289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7543077257075836612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 834ff89f554ed714cbeb8b611dce652f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlightColor: {r: 0.015686274, g: 1, b: 0.9253365, a: 1}
-  highlightWidth: 3
-  outlineMode: 1
-  autoAddOutlineComponent: 1
---- !u!114 &1685517693547218041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7543077257075836612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7538ba992b11a0c409d4e4d5b0fc02c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _canInteract: 1
-  _pivot: {fileID: 751807670004355539}
-  _openState: {fileID: 11400000, guid: 3bcf28bed1c45a5448b9c111e6af96e8, type: 2}
-  _closedState: {fileID: 11400000, guid: a5118da0e4cf35e4c942ad2f296d7808, type: 2}
-  _openAngle: 90
-  _animationDuration: 0.75
 --- !u!1 &8926046256001410522
 GameObject:
   m_ObjectHideFlags: 0

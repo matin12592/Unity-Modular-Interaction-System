@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8acd0900f835b9b468df857594961751, type: 3}
-  m_Name: InteractSystem_Door_Attributes
+  m_Name: InteractSystem_Light_Attributes
   m_EditorClassIdentifier: 
   _title: 
-  DefaultText: Interact with door
+  DefaultText: Default
   GameObjectStates:
   - States:
-    - {fileID: 11400000, guid: a5118da0e4cf35e4c942ad2f296d7808, type: 2}
-    DisplayText: Open The Door
+    - {fileID: 11400000, guid: 3e951a1a214d1bf458fdb3c41908854d, type: 2}
+    DisplayText: Turn On The Light
   - States:
-    - {fileID: 11400000, guid: 3bcf28bed1c45a5448b9c111e6af96e8, type: 2}
-    DisplayText: Close The Door
+    - {fileID: 11400000, guid: a74c591a34f75514d9bc45c1d76bfcd7, type: 2}
+    DisplayText: Turn Off The Light
