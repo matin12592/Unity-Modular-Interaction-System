@@ -12,7 +12,7 @@ namespace Assets._Scripts.Primitive.InteractSystem.Monobehaviours
         public GameObject CanvasPrefab;
 
         [Header("Settings")]
-        public Vector3 TextOffset = new(0, 1f, 0);
+        public Vector3 TextOffset = new(0, .5f, 0);
         #endregion
 
         #region Private Variables
