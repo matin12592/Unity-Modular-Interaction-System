@@ -292,6 +292,7 @@ This project is developed as a collaborative learning experience. The code archi
 
 - **System Design, Architecture & All Code Logic**: [Pouriya Lakaie]
 - **3D Models & Visual Assets**: [Matin Khodabakhshi]
+- **Outline Shader**: [Quick Outline] by [Chris Nolet] - [[Asset Store Link](https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488)]
 - **Unity Engine**: Unity Technologies
 
 ---
