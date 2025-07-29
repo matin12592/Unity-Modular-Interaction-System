@@ -2,7 +2,6 @@ using Assets._Scripts.Primitive.InteractSystem.DataObjects;
 using Assets._Scripts.Primitive.InteractSystem.Managers;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Assets._Scripts.Primitive.InteractSystem.Monobehaviours
 {
