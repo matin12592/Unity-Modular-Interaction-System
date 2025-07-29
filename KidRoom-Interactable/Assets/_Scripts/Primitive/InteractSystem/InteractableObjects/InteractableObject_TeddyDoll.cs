@@ -1,8 +1,6 @@
-using System.Collections;
 using Assets._Scripts.Core.Managers;
 using Assets._Scripts.Core.Monobehaviours;
 using Assets._Scripts.Core.ScriptableObjects;
-using Assets._Scripts.Primitive.APIsystem.DataObjects;
 using Assets._Scripts.Primitive.APIsystem.Managers;
 using Assets._Scripts.Primitive.InteractSystem.Monobehaviours;
 using UnityEngine;

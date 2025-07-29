@@ -29,19 +29,21 @@ namespace Assets._Scripts.Primitive.APIsystem.Managers
             ScriptableObject_Core_State stateOn, ScriptableObject_Core_State stateOff,
             Mono_Core_Data coreData)
         {
-            var story = Manager_APIsystem.GetStoryById(storyId);
-            if (story == null)
+            Manager_APIsystem.GetStoryById(this, storyId, story =>
             {
-                Debug.LogWarning($"Story not found for ID: {storyId}");
-                return;
-            }
+                if (story == null)
+                {
+                    Debug.LogWarning($"Story not found for ID: {storyId}");
+                    return;
+                }
 
-            if (_currentRoutine != null)
-            {
-                StopCurrentPlayback();
-            }
+                if (_currentRoutine != null)
+                {
+                    StopCurrentPlayback();
+                }
 
-            _currentRoutine = owner.StartCoroutine(PlayRoutine(canvas, audioSource, story, stateOn, stateOff, coreData));
+                _currentRoutine = owner.StartCoroutine(PlayRoutine(canvas, audioSource, story, stateOn, stateOff, coreData));
+            });
         }
 
         private IEnumerator PlayRoutine(
@@ -68,7 +70,7 @@ namespace Assets._Scripts.Primitive.APIsystem.Managers
             Manager_Core.SetState(coreData, stateOn);
 
             if (clip != null)
-                FindAnyObjectByType<Mono_InteractSystem_MouseController>().UpdateInteractText(clip.length);
+                FindAnyObjectByType<Mono_InteractSystem_MouseController>()?.UpdateInteractText(clip.length);
 
             yield return new WaitForSeconds(clip != null ? clip.length : 3f);
 
